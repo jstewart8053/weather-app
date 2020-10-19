@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+  background: linear-gradient(
+    to bottom,
+    rgba(254, 255, 255, 1) 0%,
+    rgba(221, 241, 249, 1) 35%,
+    rgba(160, 216, 239, 1) 100%
+  );
+
+  background-repeat: no-repeat;
+}
+
+.app {
+  background-image: url("./assets/sunny.png");
+  background-size: cover;
+  transition: 0.4 ease-out;
+  max-width: 620px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  box-shadow: 0 17px 50px rgba(0, 0, 0, 0.19), 0 12px 15px rgba(0, 0, 0, 0.19);
+}
+
+.app.cloudy {
+  background-image: url("./assets/partlyCloudy.png");
+}
+
+main {
+  min-height: 100vh;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.75)
+  );
+  width: 100%;
+  padding: 25px;
+}
+.search-box {
+  width: 100%;
+  margin: 0 0 75px;
+}
+
+.search-box .search-bar {
+  display: block;
+  width: 100%;
+  height: 80%;
+  padding: 15px;
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  border-radius: 0 0 16px 16px;
+  margin-top: -25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+  color: #313131;
+  font-size: 18px;
+  transition: 0.4s ease;
+}
+
+.search-box .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.location-box .location {
+  color: #fff;
+  font-size: 50px;
+  font-weight: 500;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.location-box .date,
+.highLow {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.5);
+}
+
+.weather-box .temp {
+  margin: 60px auto;
+  width: 55%;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding-top: 25px;
+  color: #fff;
+  font-size: 102px;
+  font-weight: 900;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.2);
+}
+
+.weather-box .weather {
+  color: #fff;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+  text-shadow: 3px 3px rgba(50, 50 70, 0.5);
+}
+.animate {
+  animation: move 1s 1;
+}
+@keyframes move {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(190deg);
+  }
+}
